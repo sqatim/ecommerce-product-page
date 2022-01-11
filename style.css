@@ -1,80 +1,159 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: hsl(219, 9%, 45%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsl(219, 9%, 45%);
 }
 
-body{
-    padding: 50px;
-    width: 100vw;
-    height: 100vh;
+body {
+  padding: 50px;
+  width: 100vw;
+  height: 100vh;
 }
-nav{
-    height: 75px;
+.container {
+  min-width: 300px;
+  height: 100%;
+  width: 100%;
+}
+nav {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  width: 70%;
+  height: 100%;
+}
+
+.menu__logo {
+  height: 23px;
+  display: flex;
+}
+
+.btn_menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  display: block;
+  background-image: url("./images/logo.svg") !important;
+  background-position: center;
+  background-size: cover;
+  width: 160px;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  gap: 10%;
+}
+
+li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%;
+  height: 100%;
+  gap: 10%;
+  position: relative;
+}
+
+.wish__list {
+  background-image: url("./images/icon-cart.svg");
+  background-size: cover;
+  width: 24px;
+  height: 22px;
+  cursor: pointer;
+  /* position: relative; */
+}
+.cart {
+  /* display: none; */
+  background: rgba(204, 204, 204, 0.219);
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  z-index: 1;
+  right: 0%;
+  top: 63px;
+}
+.account {
+  background-image: url("./images/image-avatar.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+li:hover {
+  border-bottom: 3px solid hsl(26, 100%, 55%);
+  border-top: 3px solid transparent;
+}
+
+@media only screen and (max-width: 740px) {
+  nav {
+    height: 100% !important;
     width: 100%;
-    display: flex;
-    border-bottom: 1px  solid hsl(220, 14%, 75%);
-    /* align-items:center; */
-    /* justify-content: center; */
-}
-.nav__left{
-    display: flex;
-    align-items:center;
-    gap: 5%;
-    width: 70%;
-    height: 100%;
-}
-.logo{
-    background-image: url("./images/logo.svg");
+    border: none !important;
+  }
+  .nav__left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu__logo {
+    gap: 4%;
+    height: 24px;
+  }
+
+  .btn_menu {
+    background: none;
+    border: none;
+    background-image: url("./images/icon-menu.svg");
+    display: inline-block;
+    background-size: cover;
     background-position: center;
-    background-size: cover;
-    width: 160px;
-    height: 23px;
-}
-
-ul{
-    list-style: none;
-    display: flex;
-    /* align-items: center; */
+    width: 25px;
     height: 100%;
-    gap: 10%;
-}
+    cursor: pointer;
+  }
+  .logo {
+    width: 176px;
+  }
+  ul {
+    display: none;
+    height: 30%;
+    gap: 0%;
+  }
+  li {
+    align-items: flex-start;
+  }
 
-li{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid transparent; */
-    /* justify-content: center; */
-} 
-.nav__right
-{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 30%;
-    height: 100%;
-    gap: 10%;
-}
+  li:hover {
+    border: none;
+  }
+  .nav__right {
+    align-items: flex-start;
+  }
 
-.wish__list{
-    background-image: url("./images/icon-cart.svg");
-    background-size: cover;
-    width: 24px;
-    height: 22px;
-    position: relative;
-}
-
-.account{
-    background-image: url("./images/image-avatar.png");
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-}
-
-li:hover{
-    border-bottom: 3px solid hsl(26, 100%, 55%);
-    border-top: 3px solid transparent;
-    /* box-sizing:unset; */
+  .wish__list {
+    width: 20px;
+    height: 18px;
+    margin-top: 0.4rem;
+  }
+  .account {
+    width: 30px;
+    height: 30px;
+  }
 }
